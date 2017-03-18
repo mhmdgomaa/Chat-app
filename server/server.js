@@ -13,11 +13,17 @@ var io=socketIO(server)
 io.on('connection', (socket)=>{
   console.log('New user is connected');
 
+socket.emit('newMessage', {
+  from : 'Admin', text: 'Welcome to chat room' ,createdAt : new Date().getTime()
+});
 
+socket.broadcast.emit('newMessage', {
+  from :'Admin', text : 'New user has joined',createdAt : new Date().getTime()
+});
 
   socket.on('creatMessage', function (message) {
     console.log('creatMessage', message );
-    io.emit('newMessage',{
+    socket.broadcast.emit('newMessage',{
       text: message.text ,
       from: message.from ,
       createdAt : new Date().getTime()
