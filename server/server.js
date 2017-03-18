@@ -10,6 +10,17 @@ var app = express();
 var server = http.createServer(app)
 var io=socketIO(server)
 
+io.on('connection', (socket)=>{
+  console.log('New user is connected');
+
+  socket.on('disconnect', ()=>{
+    console.log('the user disconnected');
+  });
+});
+
+
 app.use(express.static(publicPath));
 
-server.listen(port);
+server.listen(port , ()=> {
+  console.log(`the user port is ${port}`);
+})
