@@ -13,16 +13,16 @@ var io=socketIO(server)
 io.on('connection', (socket)=>{
   console.log('New user is connected');
 
-  socket.emit('newMessage', {
-    from : 'om omar',
-    to : 'omar',
-    body : 'welcome welcome'
-  });
+
 
   socket.on('creatMessage', function (message) {
     console.log('creatMessage', message );
+    io.emit('newMessage',{
+      text: message.text ,
+      from: message.from
+    } );
+  });
 
-  })
   socket.on('disconnect', ()=>{
     console.log('the user disconnected');
   });
