@@ -115,11 +115,12 @@ button:disabled {
 
 .chat-with {
   font-weight: bold;
-  font-size: 25px;
+  font-size: 40px;
+
 }
 .chat-num-messages {
   color: $gray;
-  padding-left: 70px
+  padding-left: 12px
 }
 
 .chat__sidebar {
