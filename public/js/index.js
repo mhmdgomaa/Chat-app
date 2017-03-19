@@ -31,18 +31,26 @@ jQuery('#Ahly-message').on('submit', (e)=>{
   socket.emit('creatMessage' , {
       from : 'User' ,
     text : jQuery('[name=Massage]').val()
-  }, ()=> {})
+  }, ()=> {
+    jQuery('[name=Massage]').val('') })
 })
 
-  jQuery('#Location').on('click' , function () {
+  var loc = jQuery('#Location');
+
+      loc.on('click' , function () {
     if (!navigator.geolocation) {
       return alert(' your broweser doesnt support Geolocation ' ) };
 
+      loc.attr('disabled' , 'disabled' ).text('Sending location...')
+
       navigator.geolocation.getCurrentPosition( function (position) {
           // console.log(position);
+          loc.removeAttr('disabled' , 'disabled' ).text('send location ')
+
           socket.emit('creatlocationMessage', { latitude : position.coords.latitude , longitude: position.coords.longitude  })
 
-      }, function () {
+      }, function () {          loc.removeAttr('disabled' , 'disabled' ).text('send location ')
+
         alert('cant get your location');  })
 
   })

@@ -2,20 +2,48 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>AHLY chat room</title>
+    <link rel="stylesheet" href="/css/file.css">
   </head>
-  <body>
+  <body class="chat">
+    <div class="chat__sidebar">
+           <h3>People</h3>
+      <div id="users"></div>
+    </div>
 
-    <p>Welcome in Ahly chat room </p>
-    <ol id="messages"></ol>
-    <form id="Ahly-message" >
+    <div class="chat__main">
 
-  Send Message: <input name="Massage" type="text"  placeholder="Message">
+      <div class="chat-header">
+        <img src="http://icons.iconarchive.com/icons/iconshock/vector-twitter/128/twitter-bird-icon.png" alt="avatar" />
 
-  <input type="submit" value="Send">
+        <div class="chat-about">
+          <div class="chat-with">Welcome in the chat room</div>
+          <div class="chat-num-messages">Created by Mohamed</div>
+        </div>
 
-</form>
-<button id="Location" >Send location</button>
+            </div>
+ <!-- <div class="bubble"> -->
+      <ol id="messages" class="chat__messages bubble"></ol>
+  <!-- </div> -->
+
+      <div class="chat__footer">
+
+        <form id="Ahly-message" >
+
+
+    <div class="chat__footer">
+      <input name="Massage" id="messages" placeholder ="Type your message" rows="3" autofocus autocomplete="off" ></input>
+
+
+
+      <button>Send</button>
+
+      <button id="Location" >Send location</button>
+
+
+      </div>
+
+  </form>
+    </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/libs/jquery-3.2.0.min.js"></script>
