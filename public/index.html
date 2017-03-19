@@ -2,12 +2,21 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>lol</title>
+    <title>AHLY chat room</title>
   </head>
   <body>
 
-    <p>Welcome Welcome</p>
+    <p>Welcome in Ahly chat room </p>
+    <ol id="messages"></ol>
+    <form id="Ahly-message" >
+
+  Send Massage: <input name="Massage" type="text"  placeholder="Massage">
+
+  <input type="submit" value="Send">
+
+</form>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/libs/jquery-3.2.0.min.js"></script>
     <script src="/js/index.js"></script>
   </body>
 </html>
