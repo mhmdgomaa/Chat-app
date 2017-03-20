@@ -1,27 +1,27 @@
-* {
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+$green: #86BB71;
+$blue: #94C2ED;
+$orange: #E38968;
+$gray: #92959E;
+
+*, *:before, *:after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
-  font-size: .95rem;
-}
-ul, li {
-  list-style-position: inside;
 }
 
-h5 {
-  font-weight: 50;
-  text-align: left;
-  font-size: 1.2rem;
-  /*text-shadow: 2px 2px 4px #5968a0;*/
+ul {
+  padding: 20px;
+  height: 770px;
+
+
+
+
+  li {
+    padding-bottom: 20px;
+  }
 }
-h4 {
-  font-weight: 50;
-  text-align: left;
-  font-size: 1.2rem;
-  text-shadow: 2px 2px 4px #5968a0;
-}
+
+
 h3 {
   font-weight: 600;
   text-align: center;
@@ -220,9 +220,18 @@ button:disabled {
       width: 90%;
       position: relative;}
 
+  .my-message {
+  background: $green;
+}
 
-
-
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+}
 .chat__footer {
   border-radius: 3px;
   border: none;
@@ -234,7 +243,26 @@ button:disabled {
 }
 
 
+.chat-message {
+  padding: 30px;
 
+  textarea {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    font: 14px/22px "Lato", Arial, sans-serif;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    resize: none;
+
+  }
+
+  .fa-file-o, .fa-file-image-o {
+    font-size: 16px;
+    color: gray;
+    cursor: pointer;
+
+  }
 
   button {
     float: right;
@@ -279,7 +307,7 @@ button:disabled {
 }
 
 .message {
-  padding: 10px;
+  padding: 100px;
 }
 
 .message__title {

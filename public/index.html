@@ -21,32 +21,37 @@
         </div>
 
             </div>
- <!-- <div class="bubble"> -->
+
       <ol id="messages" class="chat__messages bubble"></ol>
-  <!-- </div> -->
+
 
       <div class="chat__footer">
 
         <form id="Ahly-message" >
 
-
     <div class="chat__footer">
       <input name="Massage" id="messages" placeholder ="Type your message" rows="3" autofocus autocomplete="off" ></input>
-
-
-
       <button>Send</button>
-
       <button id="Location" >Send location</button>
-
-
       </div>
-
   </form>
     </div>
 
+<script id='message-template' type="text/template" >
+<li class="message">
+  <div  class="message__title">
+    <h4> {{from}} </h4>
+    <span>{{createdAt}}</span> </div>
+  <div class="message__body">
+     <p><h5>{{text}}</h5></p> </div>
+</li>
+
+</script>
+
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/libs/jquery-3.2.0.min.js"></script>
+      <script src="/js/libs/moment.js"></script>
+      <script src="/js/libs/mustache.js"></script>
     <script src="/js/index.js"></script>
   </body>
 </html>

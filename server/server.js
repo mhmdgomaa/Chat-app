@@ -33,7 +33,7 @@ io.on('connection', (socket)=>{
   });
 
   socket.on('creatlocationMessage',function (coords) {
-  io.emit('newlocationMessage',generatelocationMessage('user' ,coords.latitude , coords.longitude ) )
+  io.emit('newlocationMessage',generatelocationMessage('User' ,coords.latitude , coords.longitude ) )
   })
 
   socket.on('disconnect', ()=>{
