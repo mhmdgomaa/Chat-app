@@ -29,15 +29,49 @@ h3 {
   text-shadow: 2px 2px 4px #5968a0;
 }
 
+h6 {
+  font-stretch:expanded;
+  font-weight:bold;
+  font-style	: italic;
+  text-align: left;
+  font-size: 5rem;
+  text-shadow: 7px 3px red;
+;
+}
+
+ h2 {
+  font-stretch:expanded;
+  font-weight:bold;
+  font-style: italic;
+  text-align: center;
+  font-size: 2.1rem;
+  text-shadow: 2px 2px 4px #5968a0;
+;
+}
+
+ buttonn {
+   float: right;
+  border: none;
+  background: #265f82;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  transition: background .3s ease;
+  box-shadow:0px 0px 20px 0px black inset;
+}
+
 button {
   float: right;
-  color: $blue;
-  font-size: 16px;
-  text-transform: uppercase;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  background: #F2F5F8;
+  position: relative;
+	padding: 7px 5px;
+  background-color: gray;
+  margin: 10px 30px 10px 10px;
+	border-radius: 100px;
+	font-family: 'Pacifico', cursive;
+	font-size: 10px;
+  /*font-weight: bold;*/
+	color: #red;
+	text-decoration: none;
 }
 
 button:hover {
@@ -67,9 +101,9 @@ button:disabled {
   background: rgba(250, 250, 250, 0.9);
   border: 1px solid #e1e1e1;
   border-radius: 5px;
-  padding: 0px 20px;
+  padding: 10px 20px;
   margin: 20px;
-  width: 230px;
+  width: 250px;
 }
 
 .form-field {
@@ -92,16 +126,21 @@ button:disabled {
 
 .chat {
   display: flex;
-  background: #F2F5F8;
+  background: #e534d9;
   color: #434651;
 
 
 }
    .chat-header {
 
-  padding: 20px;
+  padding: 0px;
 
   border-bottom: 2px solid black  ;
+
+   background-color: gray;
+   background-image: url(https://scontent-amt2-1.xx.fbcdn.net/v/t31.0-8/16299692_410040552665688_4905201614740279470_o.jpg?oh=c16261af10c1da850b0a84dcf58358fb&oe=5970FD5E);
+   background-size: 1300px 150px;
+
 
 
   }
@@ -109,13 +148,14 @@ button:disabled {
 
 .chat-about {
   float: center ;
-  padding-left: 500px;
-  margin-top: -70px;
+  padding-left: 30px;
+  margin-top: -120px;
 }
 
 .chat-with {
   font-weight: bold;
-  font-size: 40px;
+  color: black;
+  font-size: 10px;
 
 }
 .chat-num-messages {
@@ -123,15 +163,33 @@ button:disabled {
   padding-left: 12px
 }
 
+
+/*position: relative;
+left: -50px;*/
+
 .chat__sidebar {
-  overflow-y: scroll;
+  /*overflow-y: scroll; */
+
   width: 390px;
   height: 100vh;
   background: red; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, red, black); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, red, black); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, red, black); /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(49,84,129,1)), color-stop(100%, rgba(39,107,130,1)));; /* Standard syntax */
+  background: #1a1a1c ;/* Standard syntax */
+
+
+
+
+}
+
+.p {
+  color: #1a1a1c;
+  border-style: solid;
+  border-width: 15px;
+  box-shadow:0px 0px 20px 0px red inset;
+   margin-bottom:00px;
+
 }
 
 .chat__sidebar h3 {
@@ -164,7 +222,7 @@ button:disabled {
 
   .bubble{
       background-color: #F2F2F2;
-      border-radius: 5px;
+      border-radius: 10px;
       box-shadow: 0 0 6px #B2B2B2;
       display: inline-block;
       padding: 10px 18px;
@@ -197,12 +255,12 @@ button:disabled {
   .bubble{
   		background-color: #F2F2F2;
   		border-radius: 5px;
-  		box-shadow: 0 0 6px #B2B2B2;
+  		box-shadow: 5px 5px 0px black;
   		display: inline-block;
   		padding: 10px 18px;
   		position: relative;
   		vertical-align: top;
-  		margin: 10px 10px;
+  		margin: 0px 0px;
   		border-color: #cdecb0;
   		width: 60%;
 
@@ -224,32 +282,19 @@ button:disabled {
 
 
 .chat__footer {
-  border-radius: 3px;
+  border-radius: 9px;
   border: none;
-  padding: 14px;
+  padding: 5px;
   color: white;
-  background: #6A6C75;
-  width: 90%;
+  background: #ba5ed1;
+  width: 100%;
   font-size: 14px;
+  padding-bottom: 1px;
+
 }
 
 
 
-
-  button {
-    float: right;
-    color: $blue;
-    font-size: 16px;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    background: #F2F5F8;
-
-    &:hover {
-      color: darken($blue, 7%);
-    }
-  }
 }
 }
 
@@ -264,12 +309,13 @@ button:disabled {
 }
 
 .chat__footer input {
-  width: 100%;
+  width: 87%;
   border: none;
-  padding: 10px 20px;
-  font: 14px/22px "Lato", Arial, sans-serif;
+  padding: 30px 10px;
+  font: 15px/22px "Lato", Arial, sans-serif;
   margin-bottom: 10px;
   border-radius: 5px;
+
   resize: none;
 }
 
@@ -295,6 +341,11 @@ button:disabled {
 .message__title span {
   color: #999;
 }
+.image1 {position: relative;
+  top: 0;
+  right: -4px;
+} ;
+
 
 @media (max-width: 600px) {
   * {

@@ -1,52 +1,41 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
-
-$green: #86BB71;
-$blue: #94C2ED;
-$orange: #E38968;
-$gray: #92959E;
-
-*, *:before, *:after {
+* {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  font-size: .95rem;
 }
 
-ul {
-  padding: 20px;
-  height: 770px;
-
-
-
-
-  li {
-    padding-bottom: 20px;
-  }
+ul, li {
+  list-style-position: inside;
 }
-
 
 h3 {
   font-weight: 600;
   text-align: center;
-  font-size: 2.3rem;
-  text-shadow: 2px 2px 4px #5968a0;
+  font-size: 1.5rem;
 }
 
 button {
-  float: right;
-  color: $blue;
-  font-size: 16px;
-  text-transform: uppercase;
   border: none;
+  background: #265f82;
+  color: white;
   cursor: pointer;
-  font-weight: bold;
-  background: #F2F5F8;
+  padding: 10px;
+  transition: background .3s ease;
 }
 
 button:hover {
-  color: darken($red, 7%)
+  border: none;
+  background: #1F4C69;
+  color: white;
+  padding: 10px;
 }
 
 button:disabled {
   cursor: default;
-  background: #ffff;
+  background: #698ea5;
 }
 
 .centered-form {
@@ -92,52 +81,24 @@ button:disabled {
 
 .chat {
   display: flex;
-  background: #F2F5F8;
-  color: #434651;
-
-
-}
-   .chat-header {
-
-  padding: 20px;
-
-  border-bottom: 2px solid black  ;
-
-
-  }
-
-
-.chat-about {
-  float: center ;
-  padding-left: 500px;
-  margin-top: -70px;
-}
-
-.chat-with {
-  font-weight: bold;
-  font-size: 40px;
-
-}
-.chat-num-messages {
-  color: $gray;
-  padding-left: 12px
 }
 
 .chat__sidebar {
   overflow-y: scroll;
-  width: 390px;
+  width: 260px;
   height: 100vh;
-  background: red; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, red, black); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(bottom right, red, black); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(bottom right, red, black); /* For Firefox 3.6 to 15 */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(49,84,129,1)), color-stop(100%, rgba(39,107,130,1)));; /* Standard syntax */
+  background: -moz-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(49,84,129,1)), color-stop(100%, rgba(39,107,130,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ie10+ */
+  background: linear-gradient(325deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* w3c */
 }
 
 .chat__sidebar h3 {
-  color: #ffffff;
-  margin: 20px 20px;
-  text-align: center;
+  color: #e6eaee;
+  margin: 10px 20px;
+  text-align: left;
 }
 
 .chat__sidebar ul {
@@ -159,128 +120,19 @@ button:disabled {
   width: 100%;
 }
 
-
-
-
-  .bubble{
-      background-color: #F2F2F2;
-      border-radius: 5px;
-      box-shadow: 0 0 6px #B2B2B2;
-      display: inline-block;
-      padding: 10px 18px;
-      position: relative;
-      vertical-align: top;
-      float: left;
-      margin: 5px 45px 5px 20px;
-  	border-color: #cdecb0;
-
-  }
-
-  .bubble::before {
-      background-color: #F2F2F2;
-      content: "\00a0";
-      display: block;
-      height: 16px;
-      position: absolute;
-      top: 11px;
-      transform:             rotate( 29deg ) skew( -35deg );
-          -moz-transform:    rotate( 29deg ) skew( -35deg );
-          -ms-transform:     rotate( 29deg ) skew( -35deg );
-          -o-transform:      rotate( 29deg ) skew( -35deg );
-          -webkit-transform: rotate( 29deg ) skew( -35deg );
-      width:  20px;
-      box-shadow: -2px 2px 2px 0 rgba( 178, 178, 178, .4 );
-      left: -9px;
-
-  	}
-
-  .bubble{
-  		background-color: #F2F2F2;
-  		border-radius: 5px;
-  		box-shadow: 0 0 6px #B2B2B2;
-  		display: inline-block;
-  		padding: 10px 18px;
-  		position: relative;
-  		vertical-align: top;
-  		margin: 10px 10px;
-  		border-color: #cdecb0;
-  		width: 60%;
-
-  	}
-
-    .chat__messages {
-      flex-grow: 1;
-      color: black;
-      overflow-y: scroll;
-      padding: 18px 20px;
-      line-height: 26px;
-      font-size: 25px;
-      border-radius: 7px;
-      margin-bottom: 30px;
-      width: 90%;
-      position: relative;}
-
-  .my-message {
-  background: $green;
+.chat__messages {
+  flex-grow: 1;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
 }
 
-.clearfix:after {
-	visibility: hidden;
-	display: block;
-	font-size: 0;
-	content: " ";
-	clear: both;
-	height: 0;
-}
 .chat__footer {
-  border-radius: 3px;
-  border: none;
-  padding: 14px;
-  color: white;
-  background: #6A6C75;
-  width: 90%;
-  font-size: 14px;
+  background: #e6eaee;
+  display: flex;
+  padding: 10px;
+  /*height: 60px;*/
+  flex-shrink: 0;
 }
-
-
-.chat-message {
-  padding: 30px;
-
-  textarea {
-    width: 100%;
-    border: none;
-    padding: 10px 20px;
-    font: 14px/22px "Lato", Arial, sans-serif;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    resize: none;
-
-  }
-
-  .fa-file-o, .fa-file-image-o {
-    font-size: 16px;
-    color: gray;
-    cursor: pointer;
-
-  }
-
-  button {
-    float: right;
-    color: $blue;
-    font-size: 16px;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    background: #F2F5F8;
-
-    &:hover {
-      color: darken($blue, 7%);
-    }
-  }
-}
-}
-
 
 .chat__footer form {
   flex-grow: 1;
@@ -292,13 +144,9 @@ button:disabled {
 }
 
 .chat__footer input {
-  width: 100%;
   border: none;
-  padding: 10px 20px;
-  font: 14px/22px "Lato", Arial, sans-serif;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  resize: none;
+  padding: 10px;
+  flex-grow: 1;
 }
 
 .chat__messages {
@@ -307,7 +155,7 @@ button:disabled {
 }
 
 .message {
-  padding: 100px;
+  padding: 10px;
 }
 
 .message__title {

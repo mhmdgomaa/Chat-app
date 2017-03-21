@@ -1,57 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/file.css">
-  </head>
-  <body class="chat">
-    <div class="chat__sidebar">
-           <h3>Users</h3>
-      <div id="users"></div>
-    </div>
 
-    <div class="chat__main">
+<head>
+  <meta charset="utf-8">
+  <title>Join | ChatApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="stylesheet" href="/css/file.css">
+</head>
 
-      <div class="chat-header">
-        <img src="http://icons.iconarchive.com/icons/iconshock/vector-twitter/128/twitter-bird-icon.png" alt="avatar" />
-
-        <div class="chat-about">
-          <div class="chat-with">Welcome </div>
-          <div class="chat-num-messages">Created by Mohamed</div>
-        </div>
-
-            </div>
-
-      <ol id="messages" class="chat__messages bubble"></ol>
-
-
-      <div class="chat__footer">
-
-        <form id="Ahly-message" >
-
-    <div class="chat__footer">
-      <input name="Massage" id="messages" placeholder ="Type your message" rows="3" autofocus autocomplete="off" ></input>
-      <button>Send</button>
-      <button id="Location" >Send location</button>
+<body class="centered-form">
+  <div class="centered-form__form">
+    <form action="/chat.html">
+      <div class="form-field">
+        <h2>Join a Chat<h2>
       </div>
-  </form>
-    </div>
+      <div class="form-field">
+        <label>Display name</label>
+        <input type="text" name="name" autofocus/>
+      </div>
 
-<script id='message-template' type="text/template" >
-<li class="message">
-  <div  class="message__title">
-    <h4> {{from}} </h4>
-    <span>{{createdAt}}</span> </div>
-  <div class="message__body">
-     <p><h5>{{text}}</h5></p> </div>
-</li>
+      <div class="form-field">
+        <buttonn> <h3>Join<h3></buttonn>
+      </div>
+    </form>
+  </div>
+</body>
 
-</script>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/libs/jquery-3.2.0.min.js"></script>
-      <script src="/js/libs/moment.js"></script>
-      <script src="/js/libs/mustache.js"></script>
-    <script src="/js/index.js"></script>
-  </body>
 </html>
