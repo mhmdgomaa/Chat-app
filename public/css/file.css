@@ -63,10 +63,13 @@ h6 {
 
 button {
   float: right;
-  position: relative;
+
+  position: static;
+  width   : 60px;
+  height: 50px;
 	padding: 7px 5px;
-  background-color: gray;
-  margin: 10px 30px 10px 10px;
+  background-color: pink;
+  margin: 5px 5px 2px 5px;
 	border-radius: 100px;
 	font-family: 'Pacifico', cursive;
 	font-size: 10px;
@@ -130,6 +133,14 @@ button:disabled {
   background: #e534d9;
   color: #434651;
 
+
+}
+.imag3{
+  float: right;
+  position: relative;
+  height: 140px;
+
+  width:250px;
 
 }
    .chat-header {
@@ -319,11 +330,12 @@ left: -50px;*/
 }
 
 .chat__footer input {
-  width: 87%;
+
+  width: 88%;
   border: none;
-  padding: 30px 10px;
+  padding: 10px 10px;
   font: 15px/22px "Lato", Arial, sans-serif;
-  margin-bottom: 10px;
+  margin-top: 5px;
   border-radius: 5px;
 
   resize: none;
@@ -352,8 +364,17 @@ left: -50px;*/
   color: #999;
 }
 .image1 {position: relative;
-  top: 0;
-  right: -4px;
+  resize: vertical;
+
+  top: -5px;
+  right: 1px;
+} ;
+
+.image11 {position: relative;
+  resize: vertical;
+
+  top: 10px;
+  right: -2px;
 } ;
 
 
