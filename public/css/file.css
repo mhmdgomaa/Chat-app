@@ -58,6 +58,7 @@ h6 {
   padding: 5px;
   transition: background .3s ease;
   box-shadow:0px 0px 20px 0px black inset;
+  margin : 0px
 }
 
 button {
@@ -203,6 +204,15 @@ left: -50px;*/
 }
 
 .chat__sidebar li {
+  color: gray;
+  font-stretch:expanded;
+  font-weight:bold;
+  font-style: italic;
+
+  font-size: .9rem;
+
+  text-shadow: 2px 2px 4px #5968a0;
+
   background: #e6eaee;
   border: 1px solid #e1e1e1;
   border-radius: 5px;

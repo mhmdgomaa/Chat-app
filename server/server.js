@@ -36,21 +36,24 @@ io.on('connection', (socket)=>{
   socket.broadcast.emit('newMessage',
       generateMessage('Admin' ,  `${par.name} has joined`)
   );
-  const {Users} = require('./utils/users');
 
 });
 
 
   socket.on('creatMessage', function (message , callback) {
     console.log('creatMessage', message );
-    io.emit('newMessage',generateMessage(message.from , message.text)
+    var user = users.getUser(socket.id)
+
+    io.emit('newMessage',generateMessage(user.name , message.text)
      );
      callback( 'from the server' );
 
   });
 
   socket.on('creatlocationMessage',function (coords) {
-  io.emit('newlocationMessage',generatelocationMessage('User' ,coords.latitude , coords.longitude ) )
+    var user = users.getUser(socket.id)
+
+  io.emit('newlocationMessage',generatelocationMessage(user.name ,coords.latitude , coords.longitude ) )
   })
 
   socket.on('disconnect', () => {

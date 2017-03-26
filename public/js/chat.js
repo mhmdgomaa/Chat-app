@@ -64,7 +64,7 @@ jQuery('#Ahly-message').on('submit', (e)=>{
   e.preventDefault();
 
   socket.emit('creatMessage' , {
-      from : 'User' ,
+      
     text : jQuery('[name=Message]').val()
   }, ()=> {
     jQuery('[name=Message]').val('') })
