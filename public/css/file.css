@@ -49,7 +49,7 @@ h6 {
 ;
 }
 
- buttonn {
+ .buttonn {
    float: right;
   border: none;
   background: #265f82;
@@ -140,7 +140,7 @@ button:disabled {
    background-color: gray;
    background-image: url(https://scontent-amt2-1.xx.fbcdn.net/v/t31.0-8/16299692_410040552665688_4905201614740279470_o.jpg?oh=c16261af10c1da850b0a84dcf58358fb&oe=5970FD5E);
    background-size: 1300px 150px;
-
+   /*background-position: relative */
 
 
   }
