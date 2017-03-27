@@ -13,13 +13,13 @@ ul, li {
 h5 {
   font-weight: 50;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   /*text-shadow: 2px 2px 4px #5968a0;*/
 }
 h4 {
   font-weight: 50;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-shadow: 2px 2px 4px #5968a0;
 }
 h3 {
@@ -138,21 +138,19 @@ button:disabled {
 .imag3{
   float: right;
   position: relative;
-  height: 140px;
+  height: 110px;
 
   width:250px;
 
 }
    .chat-header {
 
-  padding: 0px;
-
-  border-bottom: 2px solid black  ;
-
+  padding-bottom:  -50px;
+  border-bottom: .5px solid gray  ;
+ /*top : 150px;*/
    background-color: gray;
    background-image: url(https://scontent-amt2-1.xx.fbcdn.net/v/t31.0-8/16299692_410040552665688_4905201614740279470_o.jpg?oh=c16261af10c1da850b0a84dcf58358fb&oe=5970FD5E);
-   background-size: 1300px 150px;
-   /*background-position: relative */
+   background-size: 1300px 110px;
 
 
   }
@@ -182,7 +180,7 @@ left: -50px;*/
 .chat__sidebar {
   /*overflow-y: scroll; */
 
-  width: 390px;
+  width: 350px;
   height: 100vh;
   background: red; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, red, black); /* For Safari 5.1 to 6.0 */

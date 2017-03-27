@@ -1,6 +1,22 @@
 
 
 var socket =io() ;
+
+function scrollToBottom () {
+  // Selectors
+  var messages = jQuery('#messages');
+  var newMessage = messages.children('li:last-child')
+  // Heights
+  var clientHeight = messages.prop('clientHeight');
+  var scrollTop = messages.prop('scrollTop');
+  var scrollHeight = messages.prop('scrollHeight');
+  var newMessageHeight = newMessage.innerHeight();
+  var lastMessageHeight = newMessage.prev().innerHeight();
+
+  if (clientHeight + scrollTop + newMessageHeight + lastMessageHeight >= scrollHeight) {
+    messages.scrollTop(scrollHeight);
+  }
+}
 socket.on('connect' ,function (){
 
 var par = jQuery.deparam(window.location.search)
@@ -40,6 +56,7 @@ socket.emit('join', par , function(err) {
            createdAt : time
          })
       jQuery('#messages').append(html);
+      scrollToBottom ();
     })
 
   socket.on('newlocationMessage', function (message) {
@@ -51,12 +68,7 @@ socket.emit('join', par , function(err) {
       createdAt: time
     });
     jQuery('#messages').append(html);
-    // var li =jQuery('<li></li>');
-    // var a = jQuery('<a target="_blank">My current location</a>')
-    // li.text(`${message.from} ${time}:`)
-    // a.attr('href', message.url )
-    // li.append(a);
-    // jQuery('#messages').append(li);
+    scrollToBottom ()
 
   })
 
@@ -64,7 +76,7 @@ jQuery('#Ahly-message').on('submit', (e)=>{
   e.preventDefault();
 
   socket.emit('creatMessage' , {
-      
+
     text : jQuery('[name=Message]').val()
   }, ()=> {
     jQuery('[name=Message]').val('') })
@@ -83,6 +95,7 @@ jQuery('#Ahly-message').on('submit', (e)=>{
           loc.removeAttr('disabled' , 'disabled' )
 
           socket.emit('creatlocationMessage', { latitude : position.coords.latitude , longitude: position.coords.longitude  })
+
 
       }, function () {          loc.removeAttr('disabled' , 'disabled' ).text('send location ')
 
