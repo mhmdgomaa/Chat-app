@@ -4,29 +4,32 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="/css/file.css">
   </head>
+
+
   <body class="chat">
 
-    <div class="chat__sidebar p " >
-
-           <h3>Users</h3>
-      <div id="users"></div>
-    </div>
 
     <div class="chat__main">
 
+          <div class="chat__sidebar p " >
+       <h3>Users</h3>
+
+            <div id="users"></div>
+          </div>
+
       <div class="chat-header">
-        <!-- <img src="http://affinitynumerology.com/images/NumerologyNumbers74.png"  height="120" width="150"   /> -->
-        <img src="http://www.pd4pic.com/images/eagle-raptor-bird-of-prey-attacking-red-hawk.png" class="imag3"   alt="avatar" />
+        <img src="http://icons.iconarchive.com/icons/artdesigner/tweet-my-web/256/single-bird-icon.png"  height="60" width="150"   />
+        <!-- <img src="http://www.pd4pic.com/images/eagle-raptor-bird-of-prey-attacking-red-hawk.png" class="imag3"   alt="avatar" /> -->
       </div>
 
-        <div class="chat-header">
+        <!-- <div class="chat-header">
 
         <div class="chat-about">
           <div class="chat-with" > <h6>AHLY</h6>  </div>
           <div class="chat-num-messages">Created by Mohamed</div>
         </div>
 
-            </div>
+            </div> -->
 
       <ol id="messages" class="chat__messages bubble"></ol>
 
@@ -43,7 +46,7 @@
       </div>
   </form>
     </div>
-
+</div>
 
 <script id='message-template' type="text/template" >
 <li class="message">
@@ -70,6 +73,7 @@
            </li>
 
     </script>
+
 
 
     <script src="/socket.io/socket.io.js"></script>

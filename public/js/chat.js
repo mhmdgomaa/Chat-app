@@ -17,6 +17,7 @@ function scrollToBottom () {
     messages.scrollTop(scrollHeight);
   }
 }
+
 socket.on('connect' ,function (){
 
 var par = jQuery.deparam(window.location.search)
@@ -102,3 +103,4 @@ jQuery('#Ahly-message').on('submit', (e)=>{
         alert('cant get your location');  })
 
   })
+  

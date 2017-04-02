@@ -87,6 +87,8 @@ button:disabled {
   background: #ffff;
 }
 
+
+
 .centered-form {
   display: flex;
   align-items: center;
@@ -130,8 +132,8 @@ button:disabled {
 
 .chat {
   display: flex;
-  background: #e534d9;
-  color: #434651;
+  background:#725e72;
+  color: #black;
 
 
 }
@@ -148,9 +150,8 @@ button:disabled {
   padding-bottom:  -50px;
   border-bottom: .5px solid gray  ;
  /*top : 150px;*/
-   background-color: gray;
-   background-image: url(https://scontent-amt2-1.xx.fbcdn.net/v/t31.0-8/16299692_410040552665688_4905201614740279470_o.jpg?oh=c16261af10c1da850b0a84dcf58358fb&oe=5970FD5E);
-   background-size: 1300px 110px;
+   background-color: #897689;
+
 
 
   }
@@ -180,25 +181,35 @@ left: -50px;*/
 .chat__sidebar {
   /*overflow-y: scroll; */
 
-  width: 350px;
-  height: 100vh;
+  position:absolute ;
+
+  left: 1536px;
+  right: -10px;
+  top: 65px;
+  /* this is the arbitrary value */
+  width: 10%;
+  height: 81.2%;
+  z-index: 1000;
   background: red; /* For browsers that do not support gradients */
   background: -webkit-linear-gradient(left top, red, black); /* For Safari 5.1 to 6.0 */
   background: -o-linear-gradient(bottom right, red, black); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(bottom right, red, black); /* For Firefox 3.6 to 15 */
-  background: #1a1a1c ;/* Standard syntax */
+  background: black ;/* Standard syntax */
 
 
 
 
 }
+.c{
+  border: 2px ;
+  height: 20px
 
+}
 .p {
-  color: #1a1a1c;
+  color: black;
   border-style: solid;
   border-width: 15px;
   box-shadow:0px 0px 20px 0px red inset;
-   margin-bottom:00px;
 
 }
 
@@ -305,7 +316,7 @@ left: -50px;*/
   border: none;
   padding: 5px;
   color: white;
-  background: #ba5ed1;
+  background: #897689 ;
   width: 100%;
   font-size: 14px;
   padding-bottom: 1px;
